@@ -1,6 +1,7 @@
+ls
 const getStudentsPerCurriculum = require('../filter-map/ex3.js');
 
-xdescribe('map + filter - exercice 3', () => {
+describe('map + filter - exercice 3', () => {
 
   test('getStudentsPerCurriculum', () => {
     expect(getStudentsPerCurriculum(

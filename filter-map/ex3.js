@@ -50,7 +50,23 @@ Sortie attendue:
 
 */
 
-function getStudentsPerCurriculum(campuses, curriculumName) {
+const getData = x => {
+  let result;
+
+  result = curriculums[x].name;
+
+  return result;
+}
+
+const getStudentsPerCurriculum = (campuses, curriculumName) => {
+  
+  let result;
+  /* let myArray = [];
+  myArray = campuses.map(x=>x.curriculums); */
+  /* lire donnée depuis campuses : result = campuses[0].curriculums[0].name; */
+  /* lire donnée depuis myArray : result = myArray[0][0].name */
+  result = campuses.filter(x=>getData(x) === curriculumName);
+  return result;
 }
 
 module.exports = getStudentsPerCurriculum;

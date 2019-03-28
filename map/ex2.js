@@ -42,9 +42,9 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
-}
+const isSuitable = x => x.isVegetarian ? 'suitable' : 'not suitable'; 
 
+const getFoodCategories = foods => foods.map(x => `${x.food} is ${isSuitable(x)} for vegetarians`);
 
 
 // Ne pas modifier l'export

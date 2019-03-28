@@ -59,10 +59,25 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
+const isLabel = x => {
+  let myObject={};
+  if (x.rating <60) {
+    myObject.label = 'rotten';
+    myObject.name = x.name;
+    myObject.rating = x.rating;
+  } else if (x.rating >75) {
+    myObject.label = 'certified fresh';
+    myObject.name = x.name;
+    myObject.rating = x.rating;
+  } else {
+    myObject.label = 'fresh';
+    myObject.name = x.name;
+    myObject.rating = x.rating;
+  }
+  return myObject;
 }
 
-
+const getMoviesFreshness = movies => movies.map(x => isLabel(x));
 
 // Ne pas modifier l'export
 module.exports = getMoviesFreshness;
